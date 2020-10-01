@@ -1,0 +1,9 @@
+// Instalacion para gatsby 
+
+npm i -g gatsby 
+
+// Para crear el proyecto 
+
+gatsby new "NOMBRE DE LA CARPETA"
+
+
