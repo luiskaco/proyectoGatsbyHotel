@@ -6,4 +6,47 @@ npm i -g gatsby
 
 gatsby new "NOMBRE DE LA CARPETA"
 
+| Nota:
 
+gatsby develo | inicia el servidor
+gatsby build  | comprime el proyecto
+gtsby serve   | ejecuta el comprimido en un servidor
+gatsby clean  | Borra cache
+gatsby info   | muestra informes. 
+
+// Solucionando
+gatsby clean 
+npm install  
+gatsby develop 
+
+
+| Nota 2: Si se realiza un cambio en el archivo de configuracion, se debe reiniciar nuevamente los servicios.
+
+INSTANDO DEPENDENCIAS
+ |Style Componetn 
+ npm i @emotion/core @emotion/styled gatsby-plugin-emotion 
+
+nota: gatsby-plugin-emotion se usada para conectar gatsby con styled component
+
+
+PARA ABRIR GRAPHIQL
+http://localhost:8000/__graphql
+
+ejemplo de consulta cn graql
+
+query {
+  allFile(filter: {sourceInstanceName: {eq :"images"}}){
+    nodes{
+      relativePath
+      childImageSharp{
+        fluid{
+          srcSet
+        }
+      }
+    }
+  }
+}
+
+| Plugin para usar de backgraund una iamgen en graql
+npm i gatsby-backgraund-image
+npm install --save gatsby-background-image
