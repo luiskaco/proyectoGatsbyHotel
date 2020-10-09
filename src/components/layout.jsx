@@ -1,7 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet'; // Nota: es que modifica todo el html que contiene el head antes del body
 import {Global, css} from '@emotion/core';
-import Header from '../components/header';
+import Header from './header';
+import Footer from './footer';
 
 const Layout = (props) => {
 
@@ -14,7 +15,11 @@ const Layout = (props) => {
                 styles={css`
                     html{
                         font-size:62.5%; /* 10 px = 1rem */
+                        box-sizing: border-box;
                     }
+                    *, *:before, *:after {
+                        box-sizing: inherit;
+                        }
                     body{
                         font-size: 18px;
                         font-size: 1.8rem;
@@ -48,6 +53,7 @@ const Layout = (props) => {
             </Helmet>
             <Header />
             {props.children}
+            <Footer />
         </>  
      );
 }

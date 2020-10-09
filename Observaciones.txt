@@ -50,3 +50,21 @@ query {
 | Plugin para usar de backgraund una iamgen en graql
 npm i gatsby-backgraund-image
 npm install --save gatsby-background-image
+
+| CMS 
+   1 - datosCmS
+   2 - contentfull
+   3 - strappi
+
+   4 - wordpres dispone de api
+
+
+| Source de gatsby para integrar 
+https://www.gatsbyjs.com/plugins/?=source%20dato
+
+|Integracion datosCmS
+https://www.gatsbyjs.com/plugins/gatsby-source-datocms/?=source%20dato
+
+1 - se configura en el archvo de configuraciones
+
+1- Se registra api de gatsby en solo lectura
