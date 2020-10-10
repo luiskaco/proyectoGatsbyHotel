@@ -3,12 +3,20 @@ import Helmet from 'react-helmet'; // Nota: es que modifica todo el html que con
 import {Global, css} from '@emotion/core';
 import Header from './header';
 import Footer from './footer';
+import useSeo from '../hooks/use-seo';
 
 const Layout = (props) => {
 
-        /*NOta: Global no tiene etiqueta de cierre, y se pasan como props(styles)
+    // Acceder a los valores de seo de datocms
+
+    /*NOta: Global no tiene etiqueta de cierre, y se pasan como props(styles)
                 Global requiere el uso del props(style), mientras que los demas el props(css)
         */
+    const seo = useSeo();
+   // console.log(seo);
+    
+    const {siteName, fallbackSeo:{description,title}} = seo ;
+
     return ( 
         <>       
             <Global 
@@ -47,13 +55,16 @@ const Layout = (props) => {
             
             />
             <Helmet>
-                <title>Gatsby Hotel</title>
+                <title>{title}</title>
+                <meta name="description" content={description} />
                 <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
                 <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet" />
             </Helmet>
             <Header />
             {props.children}
-            <Footer />
+            <Footer 
+                tille={title}
+            />
         </>  
      );
 }

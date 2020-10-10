@@ -68,3 +68,30 @@ https://www.gatsbyjs.com/plugins/gatsby-source-datocms/?=source%20dato
 1 - se configura en el archvo de configuraciones
 
 1- Se registra api de gatsby en solo lectura
+
+
+
+
+| PARA CREAR EL BUILT
+gatsby build
+
+Nota: Todo se crea en la carpeta public
+
+
+| PAra verificar el build
+gatsby serve
+
+
+| b) Deploiment con zeit (creadores de next)
+link: https://vercel.com/
+
+comand: https://github.com/vercel/vercel
+
+1 - Instalar el cli 
+npm i -g now 
+
+2-  importante especificar hacia donde zeit hara el deploitment
+now login 
+
+3 - Especificar la carpeta que sera el deploitment out/ la diagonal es para especificar la version exportada
+now public/
